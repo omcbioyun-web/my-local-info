@@ -50,6 +50,7 @@ export default function Home() {
           <nav className="flex items-center gap-4 text-sm font-medium">
             <a href="#events" className="text-orange-800 hover:text-orange-600 transition-colors">행사·축제</a>
             <a href="#welfares" className="text-orange-800 hover:text-orange-600 transition-colors">지원금·혜택</a>
+            <Link href="/blog" className="text-orange-850 hover:text-orange-600 transition-colors font-semibold">블로그</Link>
             <span className="text-orange-200">|</span>
             <span className="text-xs text-orange-500 bg-orange-50 px-2.5 py-1 rounded-full border border-orange-100">
               실시간 동네 소식
@@ -139,7 +140,7 @@ export default function Home() {
                 {/* 링크 버튼 */}
                 <div className="px-6 py-4 bg-stone-50/50 border-t border-stone-100 flex justify-end">
                   <Link
-                    href={`/info/${event.id}`}
+                    href="/blog"
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 hover:text-orange-700 transition-colors"
                   >
                     자세히 보기
@@ -206,7 +207,7 @@ export default function Home() {
                 {/* 링크 버튼 */}
                 <div className="px-6 py-4 bg-stone-50/50 border-t border-stone-100 flex justify-end">
                   <Link
-                    href={`/info/${welfare.id}`}
+                    href="/blog"
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 hover:text-orange-700 transition-colors"
                   >
                     신청방법 확인하기
