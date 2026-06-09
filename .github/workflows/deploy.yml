@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -18,24 +18,14 @@ jobs:
           node-version: 22
           cache: 'npm'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build Project
+      - name: Build project
         run: npm run build
 
       - name: Deploy to Cloudflare Pages
-        run: |
-          echo "Checking environment variables..."
-          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "Error: CLOUDFLARE_API_TOKEN is empty! Please check GitHub Repository Secrets."
-          else
-            echo "CLOUDFLARE_API_TOKEN is detected."
-          fi
-          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "Error: CLOUDFLARE_ACCOUNT_ID is empty! Please check GitHub Repository Secrets."
-          fi
-          npx wrangler pages deploy out --project-name=my-local-info
+        run: npx wrangler pages deploy out --project-name=my-local-info
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
