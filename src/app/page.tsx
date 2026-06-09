@@ -48,7 +48,7 @@ export default function Home() {
             </h1>
           </div>
           <nav className="flex items-center gap-4 text-sm font-medium">
-            <a href="#events" className="text-orange-800 hover:text-orange-600 transition-colors">행사·축제</a>
+            <a href="#events" className="text-orange-800 hover:text-orange-600 transition-colors">지원사업</a>
             <a href="#welfares" className="text-orange-800 hover:text-orange-600 transition-colors">지원금·혜택</a>
             <Link href="/blog" className="text-orange-850 hover:text-orange-600 transition-colors font-semibold">블로그</Link>
             <span className="text-orange-200">|</span>
@@ -69,11 +69,11 @@ export default function Home() {
               오늘의 우리 동네 소식
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-orange-950 tracking-tight leading-tight">
-              성남시의 알짜배기 행사와 <br className="sm:hidden" />
+              경기도/성남시 지원사업과 <br className="sm:hidden" />
               혜택 정보를 한눈에!
             </h2>
             <p className="mt-3 text-sm sm:text-base text-orange-800/80 leading-relaxed">
-              공공데이터를 기반으로 실시간 수집된 성남시의 소식들을 모았습니다. 매일 아침 업데이트되는 생생한 동네 정보를 지금 확인해 보세요.
+              공공데이터를 기반으로 실시간 수집된 중소기업/소상공인 지원사업과 혜택 정보들을 모았습니다. 매일 아침 업데이트되는 정보를 지금 확인해 보세요.
             </p>
           </div>
           {/* 장식용 배경 도형 */}
@@ -81,11 +81,11 @@ export default function Home() {
           <div className="absolute right-12 top-4 w-32 h-32 bg-amber-200/20 rounded-full blur-xl pointer-events-none" />
         </section>
 
-        {/* 1. 이번 달 행사/축제 목록 */}
+        {/* 1. 경기도/성남시 중소기업/소상공인 지원사업 목록 */}
         <section id="events" className="scroll-mt-24">
           <div className="flex items-center gap-2 mb-6 border-b border-orange-100 pb-3">
-            <span className="text-2xl">✨</span>
-            <h3 className="text-xl sm:text-2xl font-bold text-orange-950">이번 달 행사 / 축제</h3>
+            <span className="text-2xl">🏢</span>
+            <h3 className="text-xl sm:text-2xl font-bold text-orange-950">경기도/성남시 중소기업/소상공인 지원사업</h3>
             <span className="ml-2 text-xs font-medium text-orange-600 bg-orange-100/70 px-2 py-0.5 rounded">
               {events.length}건
             </span>
@@ -101,7 +101,7 @@ export default function Home() {
                   {/* 카테고리 태그 */}
                   <div className="flex items-center justify-between mb-3">
                     <span className="inline-flex items-center text-xs font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-100">
-                      🎉 행사/축제
+                      🏢 지원사업
                     </span>
                     <span className="text-xs text-stone-400 font-medium">성남시</span>
                   </div>
